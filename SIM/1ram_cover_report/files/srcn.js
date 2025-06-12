@@ -1,2 +1,0 @@
-var g_data = ["","../ENV/ram_inf.sv","../TEST/ram_pkg.sv","../ENV/ram_scoreboard.sv","../ENV/sv_sequence_item.sv","../ENV/ram_trans.sv","../ENV/ram_gen.sv","../ENV/ram_driver.sv","../ENV/ram_monitor.sv","../ENV/ram_ref_model.sv","../ENV/ram_env.sv","../TEST/ram_lrng_data_xtn.svh","../TEST/ram_test_reset.svh","../TEST/ram_test_read.svh","../TEST/ram_test_write.svh","../TEST/ram_test_simrw.svh","../TEST/ram_test_back2back.svh","../TEST/ram_base_test.sv","../ENV/ram_defines.svh","../TOP/testbench.sv","../RTL/design.sv"];
-processSrcNamesData(g_data);
