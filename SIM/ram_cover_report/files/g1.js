@@ -1,0 +1,2 @@
+var g_data = {"9":{"pr":"/ram_pkg","ty":2,"dui":2,"dun":"work.ram_pkg","cvgs":[{"h":["\\/ram_pkg::ram_scoreboard::cvg ",2,1,20,10],"cov":[38,37,88.88],"opts":{"goal":"100"}},{"h":["/ram_pkg/ram_scoreboard/cvg",1,1,10],"cov":[38,37,88.88],"opts":{"goal":"100"}}]}};
+processCovergroupsData(g_data);

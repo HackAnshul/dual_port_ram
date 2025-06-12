@@ -1,0 +1,235 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11f MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d/home/anshul.p/projects/dual port ram/SIM
+T_opt
+!s11d port ram/SIM/work 1 port 1 ram/SIM/work 
+!s11d port ram/SIM/work 1 ram_inf 1 /home/anshul.p/projects/dual 
+!s11d ram_pkg /home/anshul.p/projects/dual 0 
+!s110 1746529259
+V?RFKWom@o`NT>PKa>>eE<0
+04 10 4 work ram_tb_top fast 0
+=1-bc305bf5d1c6-6819ebeb-b7411-6dc3
+R1
+!s12f OEM100
+!s12b OEM100
+!s124 OEM100
+o-quiet -auto_acc_if_foreign -work work
+Z3 tCvgOpt 0
+n@_opt
+OL;O;2023.4;77
+vram
+Z4 2../RTL/design.sv|../TEST/ram_pkg.sv|../TOP/testbench.sv
+Z5 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z6 !s110 1746529218
+!i10b 1
+!s100 PYob_X`Q0VDOT9816B@Rm3
+IYh7nFn@@S:gCR]l_@7kJ70
+S1
+R2
+w1746517775
+8../RTL/design.sv
+F../RTL/design.sv
+!i122 24
+L0 5 42
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+Z8 OL;L;2023.4;77
+r1
+!s85 0
+31
+Z9 !s108 1746529218.000000
+Z10 !s107 ../TEST/ram_base_test.sv|../TEST/ram_test_back2back.svh|../TEST/ram_test_simrw.svh|../TEST/ram_test_write.svh|../TEST/ram_test_read.svh|../TEST/ram_test_reset.svh|../TEST/ram_lrng_data_xtn.svh|../ENV/ram_env.sv|../ENV/ram_scoreboard.sv|../ENV/ram_ref_model.sv|../ENV/ram_monitor.sv|../ENV/ram_driver.sv|../ENV/ram_gen.sv|../ENV/ram_trans.sv|../ENV/sv_sequence_item.sv|../ENV/ram_inf.sv|../ENV/ram_defines.svh|../TOP/testbench.sv|../TEST/ram_pkg.sv|../RTL/design.sv|
+Z11 !s90 -coveropt|3|+cover|+acc|+incdir+../ENV|+incdir+../TEST|../RTL/design.sv|../TEST/ram_pkg.sv|../TOP/testbench.sv|
+!i113 0
+Z12 !s102 -coveropt 3 +cover
+Z13 o-coveropt 3 +cover +acc -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z14 !s92 -coveropt 3 +cover +acc +incdir+../ENV +incdir+../TEST -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+Yram_inf
+R4
+R5
+Z15 DXx4 work 17 testbench_sv_unit 0 22 E?<IB]bW<nU?FiI^n[UJZ2
+R6
+R7
+r1
+!s85 0
+!i10b 1
+!s100 >7EESB;XM>FzS1DKIUG1X3
+IbJfMS@8i7UL4Z91:8Kg]i3
+Z16 !s105 testbench_sv_unit
+S1
+R2
+w1746428366
+8../ENV/ram_inf.sv
+Z17 F../ENV/ram_inf.sv
+!i122 24
+L0 14 0
+R8
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R14
+R3
+Xram_pkg
+R4
+!s115 ram_inf
+R5
+R6
+VN4`R>;nUOz8VI_<34=^e:1
+r1
+!s85 0
+!i10b 1
+!s100 lkSEMINNJVmg27^hXLMQW0
+IN4`R>;nUOz8VI_<34=^e:1
+S1
+R2
+w1746529211
+Z18 F../TEST/ram_pkg.sv
+F../ENV/sv_sequence_item.sv
+F../ENV/ram_trans.sv
+Z19 F../ENV/ram_defines.svh
+F../ENV/ram_gen.sv
+F../ENV/ram_driver.sv
+F../ENV/ram_monitor.sv
+F../ENV/ram_ref_model.sv
+F../ENV/ram_scoreboard.sv
+F../ENV/ram_env.sv
+F../TEST/ram_lrng_data_xtn.svh
+F../TEST/ram_test_reset.svh
+F../TEST/ram_test_read.svh
+F../TEST/ram_test_write.svh
+F../TEST/ram_test_simrw.svh
+F../TEST/ram_test_back2back.svh
+F../TEST/ram_base_test.sv
+!i122 24
+L0 8 0
+R8
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R14
+R3
+Xram_pkg_sv_unit
+R4
+R5
+R6
+V3:a^Kf@Wz0LI4iCBQ:b5z1
+r1
+!s85 0
+!i10b 1
+!s100 6^NnE4_4HZ59ociMb4d_Y1
+I3:a^Kf@Wz0LI4iCBQ:b5z1
+!i103 1
+S1
+R2
+Z20 w1746517846
+8../TEST/ram_pkg.sv
+R18
+R19
+R17
+!i122 24
+Z21 L0 57 0
+R8
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R14
+R3
+vram_tb_top
+R4
+R5
+R15
+DXx4 work 7 ram_pkg 0 22 N4`R>;nUOz8VI_<34=^e:1
+R6
+R7
+r1
+!s85 0
+!i10b 1
+!s100 21Xa8??bae]@a;^4NY1o_3
+IYbmA=XPS<^FK4oN@AQ=M50
+R16
+S1
+R2
+w1746517668
+Z22 8../TOP/testbench.sv
+Z23 F../TOP/testbench.sv
+!i122 24
+L0 8 87
+R8
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R14
+R3
+Xtestbench_sv_unit
+R4
+R5
+R6
+VE?<IB]bW<nU?FiI^n[UJZ2
+r1
+!s85 0
+!i10b 1
+!s100 fM]c=4YUS0WiIA6H`03gL0
+IE?<IB]bW<nU?FiI^n[UJZ2
+!i103 1
+S1
+R2
+R20
+R22
+R23
+R18
+R19
+R17
+!i122 24
+R21
+R8
+31
+R9
+R10
+R11
+!i113 0
+R12
+R13
+R14
+R3

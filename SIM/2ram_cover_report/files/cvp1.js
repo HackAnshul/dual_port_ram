@@ -1,0 +1,2 @@
+var g_data = {"21":["write_bin","read_bin","simrw_bin","b2b_bin"],"22":["min_addr","low_rng","med_rng","high_rng","max_addr"],"23":["low_rng","med_rng","high_rng"],"24":["min_addr","low_rng","med_rng","high_rng","max_addr"],"25":["low_rng","med_rng","high_rng"],"26":["rst_bins"],"27":["ten_read"],"28":["ten_write"]};
+processCoverpointsMapData(g_data);

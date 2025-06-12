@@ -1,0 +1,1457 @@
+# vsim -coverage ram_tb_top -c -do "coverage save -onexit -directive -cvg -codeall cover/reset_test.ucdb;run -all; exit;" "+iter=16" "+RESET_TEST" -l log/RESET_TEST.log 
+# Start time: 16:30:59 on May 06,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Warning: ../TEST/ram_test_back2back.svh(9): (vopt-2240) Treating stand-alone use of function 'randomize' as an implicit VOID cast.
+# ** Warning: ../TEST/ram_base_test.sv(52): (vopt-2250) Function "print_sb" has no return value assignment.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=3.
+# //  Questa Sim-64
+# //  Version 2023.4 linux_x86_64 Oct  9 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading sv_std.std
+# Loading work.ram_inf(fast)
+# Loading work.ram_pkg(fast)
+# Loading work.testbench_sv_unit(fast)
+# Loading work.ram_tb_top(fast)
+# Loading work.ram_inf(fast__2)
+# Loading work.ram(fast)
+# ** Warning: (vsim-3764) Stand-alone call to function 'try_get' treated as implicit void cast.
+#    Time: 0 ns  Iteration: 0  Region: /ram_pkg File: ../ENV/ram_driver.sv Line: 37
+# coverage save -onexit -directive -cvg -codeall cover/reset_test.ucdb
+# run -all
+# ======================  generator ====================== @0 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      11 |       0 |
+# objections:1
+# 
+# reset asserted
+# ======================     Driver ====================== @35 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      11 |       0 |
+# objections:1
+# 
+# ======================     Driver ====================== @45 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @45 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @45 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       1 |     106 |      10 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @45 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @45 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 45 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @55 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       1 |     106 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @55 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      11 |       0 |
+# objections:1
+# 
+#                   55 reset is applied
+# ======================   expected ====================== @55 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      11 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @55 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      11 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 55 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================  generator ====================== @65 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       8 |     235 |      10 |       0 |
+# objections:1
+# 
+# reset asserted
+# ======================     Driver ====================== @65 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       8 |     235 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @65 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @65 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       1 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @65 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @65 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 65 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @95 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       1 |       0 |
+# objections:1
+# 
+# ======================     Driver ====================== @105 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @105 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       1 |     106 |      10 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @105 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       6 |      82 |      10 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @105 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       1 |     106 |      10 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @105 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       1 |     106 |      10 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 105 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @115 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       6 |      82 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @115 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       1 |       0 |
+# objections:1
+# 
+#                  115 reset is applied
+# ======================   expected ====================== @115 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       1 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @115 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       1 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 115 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================  generator ====================== @125 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       7 |      51 |      10 |       0 |
+# objections:1
+# 
+# reset asserted
+# ======================     Driver ====================== @125 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       7 |      51 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @125 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @125 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       1 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @125 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @125 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 125 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @155 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       1 |       0 |
+# objections:1
+# 
+# ======================     Driver ====================== @165 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @165 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       6 |      82 |      10 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @165 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       9 |      86 |      10 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @165 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       6 |      82 |      10 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @165 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       6 |      82 |      10 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 165 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @175 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       9 |      86 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @175 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       1 |       0 |
+# objections:1
+# 
+#                  175 reset is applied
+# ======================   expected ====================== @175 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       1 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @175 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       1 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 175 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================  generator ====================== @185 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      11 |     180 |      10 |       0 |
+# objections:1
+# 
+# reset asserted
+# ======================     Driver ====================== @185 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      11 |     180 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @185 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @185 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       8 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @185 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @185 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 185 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @215 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       8 |       0 |
+# objections:1
+# 
+# ======================     Driver ====================== @225 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @225 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       9 |      86 |      10 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @225 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      14 |     160 |      10 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @225 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       9 |      86 |      10 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @225 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       9 |      86 |      10 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 225 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @235 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      14 |     160 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @235 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       8 |       0 |
+# objections:1
+# 
+#                  235 reset is applied
+# ======================   expected ====================== @235 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       8 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @235 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       8 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 235 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================  generator ====================== @245 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      11 |      10 |      10 |       0 |
+# objections:1
+# 
+# reset asserted
+# ======================     Driver ====================== @245 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      11 |      10 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @245 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @245 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      11 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @245 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @245 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 245 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @275 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      11 |       0 |
+# objections:1
+# 
+# ======================     Driver ====================== @285 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @285 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      14 |     160 |      10 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @285 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       5 |     160 |      10 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @285 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      14 |     160 |      10 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @285 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      14 |     160 |      10 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 285 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @295 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       5 |     160 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @295 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      11 |       0 |
+# objections:1
+# 
+#                  295 reset is applied
+# ======================   expected ====================== @295 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      11 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @295 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      11 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 295 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================  generator ====================== @305 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       8 |      21 |      10 |       0 |
+# objections:1
+# 
+# reset asserted
+# ======================     Driver ====================== @305 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       8 |      21 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @305 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @305 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      14 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @305 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @305 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 305 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @335 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      14 |       0 |
+# objections:1
+# 
+# ======================     Driver ====================== @345 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @345 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       5 |     160 |      10 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @345 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       2 |      37 |      10 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @345 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       5 |     160 |      10 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @345 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       5 |     160 |      10 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 345 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @355 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       2 |      37 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @355 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      14 |       0 |
+# objections:1
+# 
+#                  355 reset is applied
+# ======================   expected ====================== @355 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      14 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @355 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      14 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 355 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================  generator ====================== @365 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       0 |     236 |      10 |       0 |
+# objections:1
+# 
+# reset asserted
+# ======================     Driver ====================== @365 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       0 |     236 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @365 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @365 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      11 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @365 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @365 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 365 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @395 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      11 |       0 |
+# objections:1
+# 
+# ======================     Driver ====================== @405 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @405 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       2 |      37 |      10 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @405 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      10 |      14 |      10 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @405 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       2 |      37 |      10 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @405 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       2 |      37 |      10 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 405 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @415 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      10 |      14 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @415 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      11 |       0 |
+# objections:1
+# 
+#                  415 reset is applied
+# ======================   expected ====================== @415 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      11 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @415 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      11 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 415 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================  generator ====================== @425 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      15 |      29 |      10 |       0 |
+# objections:1
+# 
+# reset asserted
+# ======================     Driver ====================== @425 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      15 |      29 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @425 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @425 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       9 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @425 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @425 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 425 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @455 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       9 |       0 |
+# objections:1
+# 
+# ======================     Driver ====================== @465 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @465 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      10 |      14 |      10 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @465 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       4 |      88 |      10 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @465 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      10 |      14 |      10 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @465 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      10 |      14 |      10 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 465 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @475 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       4 |      88 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @475 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       9 |       0 |
+# objections:1
+# 
+#                  475 reset is applied
+# ======================   expected ====================== @475 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       9 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @475 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       9 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 475 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================  generator ====================== @485 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       9 |     101 |      10 |       0 |
+# objections:1
+# 
+# reset asserted
+# ======================     Driver ====================== @485 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       9 |     101 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @485 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @485 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       2 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @485 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @485 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 485 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @515 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       2 |       0 |
+# objections:1
+# 
+# ======================     Driver ====================== @525 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @525 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       4 |      88 |      10 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @525 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      13 |      75 |      10 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @525 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       4 |      88 |      10 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @525 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       4 |      88 |      10 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 525 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @535 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      13 |      75 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @535 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       2 |       0 |
+# objections:1
+# 
+#                  535 reset is applied
+# ======================   expected ====================== @535 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       2 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @535 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       2 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 535 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================  generator ====================== @545 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       4 |     161 |      10 |       0 |
+# objections:1
+# 
+# reset asserted
+# ======================     Driver ====================== @545 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       4 |     161 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @545 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @545 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       7 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @545 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @545 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 545 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @575 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       7 |       0 |
+# objections:1
+# 
+# ======================     Driver ====================== @585 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @585 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      13 |      75 |      10 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @585 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       5 |     136 |      10 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @585 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      13 |      75 |      10 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @585 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      13 |      75 |      10 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 585 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @595 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       5 |     136 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @595 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       7 |       0 |
+# objections:1
+# 
+#                  595 reset is applied
+# ======================   expected ====================== @595 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       7 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @595 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       7 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 595 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================  generator ====================== @605 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      14 |     149 |      10 |       0 |
+# objections:1
+# 
+# reset asserted
+# ======================     Driver ====================== @605 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      14 |     149 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @605 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @605 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       0 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @605 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @605 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 605 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @635 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       0 |       0 |
+# objections:1
+# 
+# ======================     Driver ====================== @645 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @645 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       5 |     136 |      10 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @645 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      15 |     211 |      10 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @645 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       5 |     136 |      10 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @645 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       5 |     136 |      10 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 645 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @655 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      15 |     211 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @655 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       0 |       0 |
+# objections:1
+# 
+#                  655 reset is applied
+# ======================   expected ====================== @655 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       0 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @655 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       0 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 655 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================  generator ====================== @665 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      15 |      85 |      10 |       0 |
+# objections:1
+# 
+# reset asserted
+# ======================     Driver ====================== @665 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      15 |      85 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @665 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @665 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      15 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @665 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @665 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 665 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @695 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      15 |       0 |
+# objections:1
+# 
+# ======================     Driver ====================== @705 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @705 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      15 |     211 |      10 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @705 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      10 |      18 |      10 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @705 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      15 |     211 |      10 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @705 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      15 |     211 |      10 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 705 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @715 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      10 |      18 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @715 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      15 |       0 |
+# objections:1
+# 
+#                  715 reset is applied
+# ======================   expected ====================== @715 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      15 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @715 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      15 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 715 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================  generator ====================== @725 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      10 |      33 |      10 |       0 |
+# objections:1
+# 
+# reset asserted
+# ======================     Driver ====================== @725 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      10 |      33 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @725 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @725 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      11 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @725 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @725 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 725 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @755 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      11 |       0 |
+# objections:1
+# 
+# ======================     Driver ====================== @765 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @765 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      10 |      18 |      10 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @765 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      15 |      16 |      10 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @765 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      10 |      18 |      10 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @765 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      10 |      18 |      10 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 765 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @775 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      15 |      16 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @775 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      11 |       0 |
+# objections:1
+# 
+#                  775 reset is applied
+# ======================   expected ====================== @775 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      11 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @775 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      11 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 775 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================  generator ====================== @785 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      14 |     226 |      10 |       0 |
+# objections:1
+# 
+# reset asserted
+# ======================     Driver ====================== @785 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      14 |     226 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @785 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @785 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      10 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @785 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @785 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 785 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @815 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      10 |       0 |
+# objections:1
+# 
+# ======================     Driver ====================== @825 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @825 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      15 |      16 |      10 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @825 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      11 |     229 |      10 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @825 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      15 |      16 |      10 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @825 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      15 |      16 |      10 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 825 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @835 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      11 |     229 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @835 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      10 |       0 |
+# objections:1
+# 
+#                  835 reset is applied
+# ======================   expected ====================== @835 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      10 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @835 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |      10 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 835 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================  generator ====================== @845 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       9 |     170 |      10 |       0 |
+# objections:1
+# 
+# reset asserted
+# ======================     Driver ====================== @845 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       9 |     170 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @845 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @845 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       6 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @845 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @845 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 845 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @875 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       6 |       0 |
+# objections:1
+# 
+# ======================     Driver ====================== @885 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @885 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      11 |     229 |      10 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @885 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      14 |     109 |      10 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @885 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      11 |     229 |      10 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @885 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      11 |     229 |      10 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 885 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @895 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      14 |     109 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @895 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       6 |       0 |
+# objections:1
+# 
+#                  895 reset is applied
+# ======================   expected ====================== @895 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       6 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @895 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       6 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 895 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================  generator ====================== @905 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       9 |      78 |      10 |       0 |
+# objections:1
+# 
+# reset asserted
+# ======================     Driver ====================== @905 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       9 |      78 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @905 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @905 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       0 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @905 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @905 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 905 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @935 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       0 |       0 |
+# objections:1
+# 
+# ======================     Driver ====================== @945 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @945 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      14 |     109 |      10 |       0 |
+# objections:1
+# 
+# ======================  generator ====================== @945 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       4 |     174 |      10 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @945 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      14 |     109 |      10 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @945 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |      14 |     109 |      10 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 945 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================     Driver ====================== @955 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       4 |     174 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @955 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       0 |       0 |
+# objections:1
+# 
+#                  955 reset is applied
+# ======================   expected ====================== @955 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       0 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @955 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |  WRITE |   0 |      10 |      80 |       0 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 955 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ======================  generator ====================== @965 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       8 |     221 |      10 |       0 |
+# objections:1
+# 
+# reset asserted
+# ======================     Driver ====================== @965 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   READ |   0 |       8 |     221 |      10 |       0 |
+# objections:1
+# 
+# ======================    Monitor ====================== @965 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:1
+# 
+# ======================   expected ====================== @965 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ======================     actual ====================== @965 
+# | Kind_e | rst | wr_addr | wr_data | rd_addr | rd_data |
+# |   IDLE |   0 |       0 |       0 |       0 |       0 |
+# objections:2
+# 
+# ** Info: Pass
+#    Time: 965 ns  Scope: ram_pkg.ram_scoreboard.check_data File: ../ENV/ram_scoreboard.sv Line: 104
+# ** Note: $finish    : ../TOP/testbench.sv(62)
+#    Time: 968 ns  Iteration: 1  Instance: /ram_tb_top
+#  ----------------------------------
+# | .#####....####....####....####.. |
+# | .##..##..##..##..##......##..... |
+# | .#####...######...####....####.. |
+# | .##......##..##......##......##. |
+# | .##......##..##...####....####.. |
+# | -> Total Read:  32               |
+# | -> Total Write:  16              |
+# | -> Total success:  48            |
+# | -> Total failure:   0            |
+#  ----------------------------------
+# Saving coverage database on exit...
+# End time: 16:32:31 on May 06,2025, Elapsed time: 0:01:32
+# Errors: 0, Warnings: 4
